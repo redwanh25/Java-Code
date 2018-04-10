@@ -11,6 +11,10 @@ public class As_a_Argument {
 	}
 	
 	public static void main(String[] args) {
-		print(s -> s.length());
+		print(s -> {
+			int a = 5;
+			System.out.println(a);
+			return s.length();
+		});
 	}
 }

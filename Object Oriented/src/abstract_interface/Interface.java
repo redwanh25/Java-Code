@@ -80,7 +80,7 @@ interface L extends K, I {
 	// something
 }
 
-abstract class M {	
+abstract class M implements L {	
 	public void red() {
 		System.out.println("redwan");
 	}

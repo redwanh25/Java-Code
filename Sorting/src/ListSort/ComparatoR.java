@@ -37,8 +37,19 @@ public class ComparatoR {
 		});
 		
 		for(Person1 p : list) {
+			
 			System.out.println(p.getFirstName() + " " + p.getLastName());
+			System.out.println(list.indexOf(p));
+			
 		}
+		int position = -1;
+		for(Person1 p : list) {
+            if(p.getFirstName().equals("Redwan")) {
+                position = list.indexOf(p);
+                break;
+            }
+        }
+		System.out.println(position);
 	}
 }
 /*

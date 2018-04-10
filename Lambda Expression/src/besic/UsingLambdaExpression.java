@@ -29,6 +29,16 @@ interface Lambda4 {
 public class UsingLambdaExpression {
 
 	public static void main(String[] args) {
+		
+		Lambda1 l0 = new Lambda1() {
+			@Override
+			public int add(int a, int b) {
+				return a + b;
+			}
+		};
+		int sum_0 = l0.add(2, 5);
+		System.out.println(sum_0);
+		
 		Lambda1 l = (int a, int b) -> a + b;	// "return (a+b)" likha jabe na without "curly bases { ____ }"
 		
 //		Lambda1 l = (int a, int b) -> {

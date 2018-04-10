@@ -9,7 +9,7 @@ class Tast {
 	
 	public Tast(int a, int b, int c) {
 		this(a, b);		// Constructor call must be the first statement in a constructor
-		this.a = a;
+		//this.a = a;
 		System.out.println(this.a);
 	}
 	public Tast(int a, int b) {

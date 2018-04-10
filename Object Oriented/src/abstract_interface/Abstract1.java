@@ -16,6 +16,7 @@ public class Abstract1 {
 		
 		D obj1 = new D();
 		obj1.swim();
+		obj1.ride();
 		
 		C obj2 = new D(); 	 // we can create a object for subclass with abstract superclass type.
 		obj2.swim();		 
