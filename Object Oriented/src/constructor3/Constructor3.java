@@ -5,6 +5,7 @@ public class Constructor3 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner (System.in);
+	//	CC cc = new CC();
 		CC.rrr(2,3,4);  // look at
 		Student3 red = new Student3();  // ctrl key chepe Student a click koro
 		red.setNumber(5.5);			// taile student constructur a chole jabe
