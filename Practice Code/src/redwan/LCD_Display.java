@@ -23,17 +23,17 @@ public class LCD_Display {
 	private int n;
 	private String num;
 	public LCD_Display(int n, String num) {
-//							     	  pos  =  0      1      2      3      4      5      6
+//					     pos  =  0      1      2      3      4      5      6
 		 placesToPrint = new Boolean[][] {{ true,  true, false,  true,  true,  true,  true},  /* 0 */
-					 				 	  {false, false, false,  true, false, false,  true},  /* 1 */
-					 					  { true, false,  true,  true,  true,  true, false},  /* 2 */
-					 					  { true, false,  true,  true, false,  true,  true},  /* 3 */
-					 					  {false,  true,  true,  true, false, false,  true},  /* 4 */
-					 				   	  { true,  true,  true, false, false,  true,  true},  /* 5 */
-					 					  { true,  true,  true, false,  true,  true,  true},  /* 6 */
-					 					  { true, false, false,  true, false, false,  true},  /* 7 */
-					 					  { true,  true,  true,  true,  true,  true,  true},  /* 8 */
-					 					  { true,  true,  true,  true, false,  true,  true}}; /* 9 */
+					 	  {false, false, false,  true, false, false,  true},  /* 1 */
+					 	  { true, false,  true,  true,  true,  true, false},  /* 2 */
+					 	  { true, false,  true,  true, false,  true,  true},  /* 3 */
+					 	  {false,  true,  true,  true, false, false,  true},  /* 4 */
+					 	  { true,  true,  true, false, false,  true,  true},  /* 5 */
+					 	  { true,  true,  true, false,  true,  true,  true},  /* 6 */
+					 	  { true, false, false,  true, false, false,  true},  /* 7 */
+					 	  { true,  true,  true,  true,  true,  true,  true},  /* 8 */
+					 	  { true,  true,  true,  true, false,  true,  true}}; /* 9 */
 		list = new ArrayList<> ();
 		this.n = n;
 		this.num = num;
