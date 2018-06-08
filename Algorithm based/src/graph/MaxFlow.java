@@ -9,7 +9,7 @@ public class MaxFlow {
 	private int[][] residual;
 	private int[] parent;
 	private boolean[] vis;
-	private int miN, maX;
+	private int miN, maX, ver;
 	
 	public MaxFlow(int size) {
 		residual = new int[size][size];
@@ -24,7 +24,7 @@ public class MaxFlow {
 		vis[s] = true;
 		while(!queue.isEmpty()) {
 			int u = queue.pollFirst();
-			for(int v = miN; v <= maX; v++) {
+			for(int v = 0; v < ver; v++) {
 				if(vis[v] == false && residual[u][v] > 0) {
 					queue.add(v);
 					vis[v] = true;
@@ -48,6 +48,7 @@ public class MaxFlow {
 			}
 			for(int v = dst; v != src; v = parent[v]) {
 				int u = parent[v];
+				
 				residual[u][v] -= flow;
 				residual[v][u] += flow;
 			}
@@ -59,14 +60,12 @@ public class MaxFlow {
 	public static void main(String[] args) {
 		Scanner cin = new Scanner(System.in);
 		int size = 200;
-		int ver = cin.nextInt();
-		int eg = cin.nextInt();
 		MaxFlow g = new MaxFlow(size);
+		g.ver = cin.nextInt();
+		int eg = cin.nextInt();
 		for(int i = 0; i < eg; i++) {
 			int u = cin.nextInt();
 			int v = cin.nextInt();
-			g.miN = Math.min(g.miN, Math.min(u, v));
-			g.maX = Math.max(g.maX, Math.max(u, v));
 			g.residual[u][v] = cin.nextInt();
 		}
 		int src = cin.nextInt();
